@@ -1,9 +1,18 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
 entity mux_2_1 is
-    port(   A, B, SEL : in bit;
-                    Y : out bit);
+    port (
+        A : in std_logic;
+        B : in std_logic;
+        SEL : in std_logic;
+        Y : out std_logic);
 end mux_2_1;
 
 architecture arch_mux_2_1 of mux_2_1 is
-    begin
-        Y <= (A and not(SEL)) or (B and SEL);
-end architecture; 
+begin
+    with (sel) select
+    Y <= A when "0",
+        B when "1";
+end architecture;
