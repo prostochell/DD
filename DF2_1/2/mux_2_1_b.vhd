@@ -12,7 +12,5 @@ end mux_2_1;
 
 architecture arch_mux_2_1 of mux_2_1 is
 begin
-    with (sel) select
-    Y <= A when "0",
-        B when "1";
+    Y <= A when SEL = '0' else B;
 end architecture;
