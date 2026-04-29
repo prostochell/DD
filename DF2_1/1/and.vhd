@@ -4,9 +4,9 @@ use ieee.numeric_std.all;
 
 entity and_gate is
     port (
-        A : in STD_LOGIC;
-        B : in STD_LOGIC;
-        Y : OUT STD_LOGIC);
+        A : in std_logic;
+        B : in std_logic;
+        Y : out std_logic);
 
 end and_gate;
 
